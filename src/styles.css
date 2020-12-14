@@ -1,0 +1,103 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  width: 100%;
+  
+}
+a {
+  text-decoration: none;
+}
+
+h2 {
+  font-weight: 500;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+.App {
+  width: 100%;
+  height: 100vh;
+  border: 1px solid black;
+}
+
+.EmptyPlayer {
+  width: 100%;
+  height: 100px;
+  color: white;
+  background: rgb(53, 52, 52);
+  bottom: 0;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Main {
+  background: lightskyblue;
+ position: relative;
+  height: 100%;
+}
+/* .menuSideBar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 50%;
+  background: rgb(0, 0, 0);
+  transform: translateX(-100vw);
+} */
+
+
+@media(max-width: 690px) {
+  .menuSideBar{
+    transform: translateX(0vw);
+  }
+}
+.header {
+  background: lightgrey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem;
+}
+
+.header .leftHeader{
+  font-size: 30px;
+  border: 5px solid black;
+  cursor: pointer;
+}
+
+.header .rightHeader{
+  display: flex;
+  align-items: center;
+}
+
+.mainGrid{
+  display: grid;
+  grid-template-columns:1fr 4fr;
+  height: 100%;
+}
+
+.nav {
+  background: lightgreen;
+  display: none;
+  
+  
+}
+
+.profileImage{
+  width: 40px;
+  height: 40px;
+  background: black;
+
+  border-radius: 50%;
+  margin: 10px;
+
+}
