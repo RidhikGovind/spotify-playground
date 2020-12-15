@@ -51,9 +51,10 @@ export default function App() {
 
   return (
     <div className="App">
-      {/* {!token && <Login />} */}
-      {/* {token && <Main />} */}
-      { <Main />}
+      {/* {!token && <Login />}
+      {token && <Main />} */}
+      {token ? <Main /> : <Login />}
+      {/* { <Main />} */}
       {/* {token && noData && (
         <Player name={name} isPlaying={isPlaying} albumCover={albumCover} />
       )}
@@ -61,3 +62,5 @@ export default function App() {
     </div>
   );
 }
+
+

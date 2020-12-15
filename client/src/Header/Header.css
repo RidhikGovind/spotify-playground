@@ -1,0 +1,12 @@
+.header {
+  background: lightgrey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem;
+}
+
+.header .rightHeader {
+  display: flex;
+  align-items: center;
+}

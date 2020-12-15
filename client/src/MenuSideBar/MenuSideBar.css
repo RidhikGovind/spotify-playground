@@ -1,0 +1,10 @@
+.MenuSideBar{
+    position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 30%;
+  background: rgba(22, 22, 22, 0.103);
+  color: white;
+  display:none;
+}
