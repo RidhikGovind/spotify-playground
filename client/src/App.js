@@ -6,26 +6,32 @@ import EmptyPlayer from "./EmptyPlayer";
 import Main from './Main'
 import hash from "./hash";
 
+import {token} from './spotify'
+
 export default function App() {
-  const [token, setToken] = useState(null);
-  const [name, setName] = useState("");
-  const [popularity, setPopularity] = useState("");
-  const [albumCover, setAlbumCover] = useState("");
+  const [_token, setToken] = useState(null);
+  // const [name, setName] = useState("");
+  // const [popularity, setPopularity] = useState("");
+  // const [albumCover, setAlbumCover] = useState("");
 
-  const [isPlaying, setIsPlaying] = useState("paused");
-  const [progress, setProgress] = useState(0);
-  const [noData, setNoData] = useState(false);
+  // const [isPlaying, setIsPlaying] = useState("paused");
+  // const [progress, setProgress] = useState(0);
+  // const [noData, setNoData] = useState(false);
 
-  useEffect(() => {
-    let _token = hash.access_token;
-    console.log(_token);
-    if (_token) {
-      setToken(_token);
+  // useEffect(() => {
+  //   let _token = hash.access_token;
+  //   console.log(_token);
+  //   if (_token) {
+  //     setToken(_token);
 
-      getCurrentlyPlaying(_token);
-    }
-  }, []);
+  //     getCurrentlyPlaying(_token);
+  //   }
+  // }, []);
 
+  //**first setting the token received to a _token state */
+  useEffect(() => setToken(token))
+
+  //WILL BE MOVING THIS TO SPOTIFY.JS SOON
   const getCurrentlyPlaying = async (token) => {
     const url = "https://api.spotify.com/v1/me/player";
     const options = {
@@ -53,7 +59,7 @@ export default function App() {
     <div className="App">
       {/* {!token && <Login />}
       {token && <Main />} */}
-      {token ? <Main /> : <Login />}
+      {_token ? <Main /> : <Login />}
       {/* { <Main />} */}
       {/* {token && noData && (
         <Player name={name} isPlaying={isPlaying} albumCover={albumCover} />
