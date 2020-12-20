@@ -23,7 +23,6 @@ const history = require("connect-history-api-fallback");
 const cluster = require("cluster");
 const CPUNumber = require("os").cpus().length;
 const request = require("request");
-const { dirname } = require("path");
 
 const generateRandomString = (length) => {
   let text = "";
@@ -51,7 +50,7 @@ if (cluster.isMaster) {
 } else {
   const app = express();
 
-  app.use(express.static(path.resolve(__dirname, "/client/build")));
+  app.use(express.static(path.resolve(__dirname, "./client/build")));
   app.use(cors());
   app.use(cookieParser());
   app.use(
@@ -65,10 +64,10 @@ if (cluster.isMaster) {
     })
   );
 
-  app.use(express.static(path.resolve(__dirname, "/client/build")));
+  app.use(express.static(path.resolve(__dirname, "./client/build")));
 
   app.get("/", (req, res) => {
-    res.render(path.resolve(__dirname, "/client/build/index.html"));
+    res.render(path.resolve(__dirname, "./client/build/index.html"));
   });
 
   //after login callback has been authorized, it is redirected to the '/callback' path below
@@ -227,7 +226,7 @@ if (cluster.isMaster) {
   app.get("*", (req, res) => {
     // *ONE MAJOR CHANGE DONE HERE*
     // res.sendFile(path.resolve(__dirname, "../client/public", "index.html"));
-     res.sendFile(path.resolve(__dirname, "/client/public/index.html"));
+     res.sendFile(path.resolve(__dirname, "./client/public","index.html"));
 
   });
 
