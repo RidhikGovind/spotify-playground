@@ -29,7 +29,9 @@ const refreshAccessToken = async () => {
       `/refresh_token?refresh_token=${getLocalRefreshToken()}`
     );
     const { access_token } = data;
-    setLocalAccessToken(access_token)
+    setLocalAccessToken(access_token);
+    window.location.reload();
+    return;
   } catch (err) {
     console.log(err);
   }
@@ -62,6 +64,7 @@ export const getAccessToken = () => {
   //same step but for access token
   if(!localAccessToken || localAccessToken === 'undefined'){
       setLocalAccessToken(access_token)
+      return access_token;
   }
 
   //then we return the localAccessToken because we need its imported in <Login /> component where we satisfy a condition to display the <Main /> component

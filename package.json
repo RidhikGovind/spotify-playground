@@ -5,9 +5,9 @@
   "main": "server.js",
   "scripts": {
     "client": "cd client && npm start",
-    "server": "node server",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
-    
+    "server": "node server.js",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -22,15 +22,16 @@
     "url": "https://github.com/RidhikGovind/spotify-playground/issues"
   },
   "homepage": "https://github.com/RidhikGovind/spotify-playground#readme",
-  
   "dependencies": {
     "axios": "^0.21.0",
+    "cluster": "^0.7.7",
     "connect-history-api-fallback": "^1.6.0",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "querystring": "^0.2.0"
+    "querystring": "^0.2.0",
+    "request": "^2.88.2"
   },
   "devDependencies": {
     "concurrently": "^5.3.0"
