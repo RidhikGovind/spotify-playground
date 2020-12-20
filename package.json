@@ -23,6 +23,9 @@
     "url": "https://github.com/RidhikGovind/spotify-playground/issues"
   },
   "homepage": "https://github.com/RidhikGovind/spotify-playground#readme",
+  "engines": {
+    "node": "12.18.3"
+  },
   "dependencies": {
     "axios": "^0.21.0",
     "cluster": "^0.7.7",
