@@ -51,7 +51,7 @@ if (cluster.isMaster) {
 } else {
   const app = express();
 
-  app.use(express.static(path.resolve(__dirname, "../client/build")));
+  app.use(express.static(path.resolve(__dirname, "/client/build")));
   app.use(cors());
   app.use(cookieParser());
   app.use(
@@ -65,10 +65,10 @@ if (cluster.isMaster) {
     })
   );
 
-  app.use(express.static(path.resolve(__dirname, "../client/build")));
+  app.use(express.static(path.resolve(__dirname, "/client/build")));
 
   app.get("/", (req, res) => {
-    res.render(path.resolve(__dirname, "../client/build/index.html"));
+    res.render(path.resolve(__dirname, "/client/build/index.html"));
   });
 
   //after login callback has been authorized, it is redirected to the '/callback' path below
