@@ -44,7 +44,7 @@ if (cluster.isMaster) {
   }
 
   cluster.on("exit", (worker, code, signal) => {
-    console.error(`node cluster worker eneded`);
+    console.error(`node cluster worker ended`);
   });
 } else {
   const app = express();
