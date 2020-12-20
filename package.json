@@ -8,7 +8,8 @@
     "server": "node server.js",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
     "start": "node server.js",
-    "heroku-postbuild": "cd client/ && npm start && npm install --production && npm run build"
+    "heroku-postbuild": "cd client && npm install --production && npm run build"
+    
   },
   "repository": {
     "type": "git",
