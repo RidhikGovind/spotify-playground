@@ -5,7 +5,7 @@ export default function Login() {
   const LOGIN_URI =
     process.env.NODE_ENV !== "production"
       ? "http://localhost:8888/login"
-      : "https://spotify-playground.herokuapp.com/login";
+      : "https://spotifyplayground.herokuapp.com/login";
 
       
   return (
