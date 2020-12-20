@@ -224,8 +224,8 @@ if (cluster.isMaster) {
 
   app.get("*", (req, res) => {
     // *ONE MAJOR CHANGE DONE HERE*
-    // res.sendFile(path.resolve(__dirname, "../client/public", "index.html"));
-     res.sendFile(path.resolve(__dirname, '/client/build/index.html'));
+    res.sendFile(path.resolve(__dirname, "../client/public", "index.html"));
+    //  res.sendFile(path.resolve(__dirname, "../client/public", "index.html"));
 
   });
 
