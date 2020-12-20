@@ -6,6 +6,7 @@ let REDIRECT_URI = process.env.REDIRECT_URI || "http://localhost:8888/callback";
 let FRONTEND_URI = process.env.FRONTEND_URI || "http://localhost:3000";
 const PORT = process.env.PORT || 8888;
 
+
 if (process.env.NODE_ENV !== "production") {
   REDIRECT_URI = "http://localhost:8888/callback";
   FRONTEND_URI = "http://localhost:3000";
@@ -22,6 +23,7 @@ const history = require("connect-history-api-fallback");
 const cluster = require("cluster");
 const CPUNumber = require("os").cpus().length;
 const request = require("request");
+const { dirname } = require("path");
 
 const generateRandomString = (length) => {
   let text = "";
@@ -224,8 +226,8 @@ if (cluster.isMaster) {
 
   app.get("*", (req, res) => {
     // *ONE MAJOR CHANGE DONE HERE*
-    res.sendFile(path.resolve(__dirname, "../client/public", "index.html"));
-    //  res.sendFile(path.resolve(__dirname, "../client/public", "index.html"));
+    // res.sendFile(path.resolve(__dirname, "../client/public", "index.html"));
+     res.sendFile(path.resolve(__dirname, "/client/public/index.html"));
 
   });
 
@@ -233,3 +235,5 @@ if (cluster.isMaster) {
     console.log(`server running at ${PORT}`);
   });
 }
+
+
