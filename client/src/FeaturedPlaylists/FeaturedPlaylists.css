@@ -1,5 +1,25 @@
-.FeaturedPlaylists{
-    text-align: center;
-    width: 100%;
-    border: 1px solid red;
+.featuredPlaylistsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  text-align: center;
+  padding: 1rem;
+  border: 1px solid red;
+}
+
+.playlistDetails {
+  margin: 1rem 0;
+  border: 1px solid green;
+}
+
+.albumCoverImg {
+  width: 250px;
+  height: 250px;
+}
+
+@media (min-width: 1082px) {
+  .featuredPlaylistsGrid {
+    grid-template-columns: repeat(2, 4fr);
+    grid-template-rows: 1fr 1fr;
+  }
 }

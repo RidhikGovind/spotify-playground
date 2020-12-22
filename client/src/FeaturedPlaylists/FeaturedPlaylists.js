@@ -1,10 +1,42 @@
-import React from 'react'
-import './FeaturedPlaylists.css'
+import React, { useState, useEffect } from "react";
+import "./FeaturedPlaylists.css";
+import { getFeaturedPlaylists } from "../spotify";
 
-export default function FeaturedPlaylists() {
-    return (
-        <div className="FeaturedPlaylists">
-            <h2>FeaturedPlaylists</h2>
-        </div>
-    )
+function FeaturedPlaylists() {
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  const getData = async () => {
+    const { data } = await getFeaturedPlaylists();
+
+    console.log(data.playlists.items);
+    setItems(data.playlists.items);
+  };
+
+  return (
+    <div className="FeaturedPlaylists">
+      <h2 className="title">Featured Playlists</h2>
+      <div className="featuredPlaylistsSection">
+        {Array.isArray(items) && (
+          <div className="featuredPlaylistsGrid">
+            {items.slice(0, 10).map(({ description, images, name, id }) => (
+              <div className="playlistDetails">
+                <div className="playlistName">{name}</div>
+                <img
+                  className="albumCoverImg"
+                  src={images[0].url}
+                  alt="albumcover"
+                />
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  );
 }
+
+export default FeaturedPlaylists;

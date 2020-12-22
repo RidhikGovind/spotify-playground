@@ -1,11 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { logout } from "../spotify";
 import "./Header.css";
+import { getUserDeets } from "../spotify";
 
 export default function Header() {
+  const [clicked, setClicked] = useState(false);
+  const [userData, setUserData] = useState("");
+
+  useEffect(() => {
+    getData();
+  }, []);
+
   const handleClicked = () => {
     setClicked(!clicked);
   };
-  const [clicked, setClicked] = useState(false);
+
+  const getData = async () => {
+    try {
+      const { data } = await getUserDeets();
+      setUserData(data);
+      // console.log(data)
+    } catch {
+      console.log("yoyo");
+    }
+  };
 
   return (
     <div className="header">
@@ -16,10 +34,16 @@ export default function Header() {
       </div>
 
       <div className="rightHeader">
-        <div className="profileName">Name</div>
-        <div className="profileImage"></div>
+        <div className="profileName">{userData.display_name}</div>
+        <div className="profileImage">
+          {userData.images ? (
+            <img src={userData.images[0].url} alt="blah" />
+          ) : null}
+        </div>
         <div className="logoutBtn">
-          <a href="#">Logout</a>
+          <a href="#" onClick={() => logout()}>
+            Logout
+          </a>
         </div>
       </div>
     </div>

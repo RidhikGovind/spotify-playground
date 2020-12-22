@@ -59,8 +59,12 @@ export default function App() {
 
   return (
     <div className="App">
+      {/* *below are the main */}
      {!_token && <Login />}
       {_token && <Main />} 
+      {/* **main */}
+
+
       {/* {_token ? <Main /> : <Login />} */}
       {/* { <Main />} */}
       {/* {_token && noData && (
