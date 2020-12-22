@@ -6,6 +6,58 @@
   padding: 0.4rem;
 }
 
+.menusidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 50%;
+  background: rgb(5, 5, 5);
+  color: white;
+  height: 100%;
+  display:none;
+  z-index: 1;
+  
+}
+
+.show{
+  display: block;
+  
+}
+.fas .fa-bar{
+  z-index: 10;
+  cursor: pointer;
+
+}
+
+
+.close{
+  position: relative;
+  padding-left: 20px;
+  padding-top: 20px;
+  cursor: pointer;
+}
+
+.menusidebar li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  margin-top: 1rem;
+  
+}
+
+.menuLinks{
+  color: white;
+  padding: 1rem;
+  width: 100%;
+}
+
+.menuLinks:hover{
+  background: #1DB954;
+}
+
+
 .header .rightHeader {
   display: flex;
   align-items: center;

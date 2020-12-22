@@ -2,6 +2,13 @@ import React, { useState, useEffect } from "react";
 import { logout } from "../spotify";
 import "./Header.css";
 import { getUserDeets } from "../spotify";
+import { MenuItems } from "./MenuItems";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
+export const onClickHideScrollbar = (value) => {
+  // console.log(value);
+  return value;
+};
 
 export default function Header() {
   const [clicked, setClicked] = useState(false);
@@ -13,6 +20,7 @@ export default function Header() {
 
   const handleClicked = () => {
     setClicked(!clicked);
+    onClickHideScrollbar(clicked);
   };
 
   const getData = async () => {
@@ -21,7 +29,7 @@ export default function Header() {
       setUserData(data);
       // console.log(data)
     } catch {
-      console.log("yoyo");
+      console.log("error while fetching user profile data");
     }
   };
 
@@ -29,8 +37,16 @@ export default function Header() {
     <div className="header">
       <div className="leftHeader">
         <div className="menuIcon" onClick={() => handleClicked()}>
-          <i className={clicked ? "fas fa-times" : "fas fa-bars"}></i>
+          <i className={clicked ? "" : "fas fa-bars fa-2x"}></i>
         </div>
+      </div>
+      <div className={clicked ? "menusidebar show " : "menusidebar "}>
+        <i className="fas fa-times fa-2x close" onClick={ handleClicked}></i>
+        {MenuItems.map((item, index) => (
+          <li key={index}>
+            <Link className="menuLinks"to={item.endpoint}>{item.title}</Link>
+          </li>
+        ))}
       </div>
 
       <div className="rightHeader">

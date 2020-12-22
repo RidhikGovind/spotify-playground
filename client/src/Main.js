@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import MenuSideBar from "./MenuSideBar/MenuSideBar";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Home from "./Home/Home";
@@ -13,7 +12,7 @@ function Main() {
     <Router>
        
       <div className="Main">
-       <MenuSideBar />
+      
 
         <div className="content">
           <Header />
