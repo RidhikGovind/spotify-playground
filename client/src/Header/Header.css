@@ -1,9 +1,29 @@
 .header {
-  background: lightgrey;
+ 
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.4rem;
+}
+
+@keyframes slowShow{
+  0%{
+    opacity: 0;
+    
+  }
+  25%{
+    opacity: 0.25;
+
+  }
+  50%{
+    opacity: 0.50;
+  }
+  75%{
+     opacity: 0.75;
+  }
+  100%{
+    opacity: 1;
+  }
 }
 
 .menusidebar {
@@ -17,11 +37,16 @@
   height: 100%;
   display:none;
   z-index: 1;
+  animation: slowShow 0.3s;
+ 
   
 }
 
 .show{
   display: block;
+ 
+ 
+
   
 }
 .fas .fa-bar{
@@ -64,11 +89,15 @@
 }
 
 .profileImage {
-  margin: 10px;
+  margin: 10px 30px 10px 10px;
 }
 
 .profileImage img {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
+}
+
+.logoutBtn a:hover{
+  color:  #1DB954;
 }

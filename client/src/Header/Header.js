@@ -6,9 +6,12 @@ import { MenuItems } from "./MenuItems";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 export const onClickHideScrollbar = (value) => {
-  // console.log(value);
   return value;
 };
+
+export const userId = (useIdData) => {
+  return useIdData;
+}
 
 export default function Header() {
   const [clicked, setClicked] = useState(false);
@@ -28,6 +31,7 @@ export default function Header() {
       const { data } = await getUserDeets();
       setUserData(data);
       // console.log(data)
+      userId(data.id)
     } catch {
       console.log("error while fetching user profile data");
     }

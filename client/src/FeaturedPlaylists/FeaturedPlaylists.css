@@ -4,13 +4,16 @@
   gap: 1rem;
   text-align: center;
   /* padding: 1rem; */
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
+.FeaturedPlaylists .title{
+  margin-left: 10px;
+}
 .playlistDetails {
   margin: 1rem 0;
   padding: 1.4rem;
-  border: 1px solid green;
+  /* border: 1px solid green; */
 }
 .playlistName {
   margin: 0.5rem 0rem;
@@ -20,5 +23,12 @@
   .featuredPlaylistsGrid {
     grid-template-columns: repeat(2, 4fr);
     grid-template-rows: 1fr 1fr;
+  }
+}
+
+@media (max-width: 375px) {
+  .FeaturedPlaylists .title {
+    font-size: 18px;
+    text-align: center;
   }
 }

@@ -23,13 +23,13 @@ function FeaturedPlaylists() {
         {Array.isArray(items) && (
           <div className="featuredPlaylistsGrid">
             {items.slice(0, 10).map(({ description, images, name, id }) => (
-              <div className="playlistDetails">
-                <div className="playlistName">{name}</div>
+              <div className="playlistDetails" key={id}>
                 <img
                   className="albumCoverImg"
                   src={images[0].url}
                   alt="albumcover"
                 />
+                <div className="playlistName">{name}</div>
               </div>
             ))}
           </div>

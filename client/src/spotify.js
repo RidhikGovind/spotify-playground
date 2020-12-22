@@ -100,3 +100,7 @@ export const getFeaturedPlaylists = () =>
   axios.get("https://api.spotify.com/v1/browse/featured-playlists", {
     headers,
   });
+
+  export const getUsersPlaylists = () => {
+    axios.get("https://api.spotify.com/v1/users/312r6pbkctzwo6kefda2qr3v4wee/playlists")
+  }

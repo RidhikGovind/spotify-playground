@@ -4,13 +4,16 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
-  border: 1px solid blue;
+  border-right: 2px solid rgba(128, 128, 128, 0.123);
 }
 
+.NewReleases .title{
+ margin-left: 10px;
+}
 
 .albumDetails {
   margin: 1rem 0;
-  border: 1px solid brown;
+  /* border: 1px solid brown; */
   padding: 1rem;
 }
 
@@ -35,5 +38,13 @@
   .albumCoverImg {
     width: 120px;
     height: 120px;
+  }
+}
+
+
+@media (max-width: 375px) {
+  .NewReleases .title {
+    font-size: 18px;
+    text-align: center;
   }
 }
