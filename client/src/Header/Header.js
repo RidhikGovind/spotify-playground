@@ -9,9 +9,8 @@ export const onClickHideScrollbar = (value) => {
   return value;
 };
 
-export const userId = (useIdData) => {
-  return useIdData;
-}
+
+
 
 export default function Header() {
   const [clicked, setClicked] = useState(false);
@@ -31,7 +30,6 @@ export default function Header() {
       const { data } = await getUserDeets();
       setUserData(data);
       // console.log(data)
-      userId(data.id)
     } catch {
       console.log("error while fetching user profile data");
     }
@@ -45,10 +43,12 @@ export default function Header() {
         </div>
       </div>
       <div className={clicked ? "menusidebar show " : "menusidebar "}>
-        <i className="fas fa-times fa-2x close" onClick={ handleClicked}></i>
+        <i className="fas fa-times fa-2x close" onClick={handleClicked}></i>
         {MenuItems.map((item, index) => (
           <li key={index}>
-            <Link className="menuLinks"to={item.endpoint}>{item.title}</Link>
+            <Link className="menuLinks" to={item.endpoint}>
+              {item.title}
+            </Link>
           </li>
         ))}
       </div>

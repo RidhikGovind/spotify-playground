@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
-import "./FeaturedPlaylists.css";
-import { getFeaturedPlaylists } from "../spotify";
+import "./Playlists.css";
 import { getUsersPlaylists } from "../spotify";
 
-
-function FeaturedPlaylists() {
+function Playlists() {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
@@ -12,18 +10,17 @@ function FeaturedPlaylists() {
   }, []);
 
   const getData = async () => {
-    const { data } = await getFeaturedPlaylists();
-    const { datas } = await getUsersPlaylists();
-console.log(datas)
-    // console.log(data.playlists.items);
-    setItems(data.playlists.items);
-  };
+     const res= await getUsersPlaylists();
+     console.log(res.data.item.images[0].url)
 
+    // console.log(data);
+    // setItems(data.playlists.items);
+  };
   return (
-    <div className="FeaturedPlaylists">
-      <h2 className="title">Featured Playlists</h2>
-      <div className="featuredPlaylistsSection">
-        {Array.isArray(items) && (
+    <div className="Playlists">
+      <h2 className="title"> Playlists</h2>
+      <div className="PlaylistsSection">
+        {/* {Array.isArray(items) && (
           <div className="featuredPlaylistsGrid">
             {items.slice(0, 10).map(({ description, images, name, id }) => (
               <div className="playlistDetails" key={id}>
@@ -36,10 +33,10 @@ console.log(datas)
               </div>
             ))}
           </div>
-        )}
+        )} */}
       </div>
     </div>
   );
 }
 
-export default FeaturedPlaylists;
+export default Playlists;

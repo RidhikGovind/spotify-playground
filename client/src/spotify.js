@@ -1,5 +1,6 @@
 import axios from "axios";
 import hash from "./hash";
+import { userId } from "./Header/Header";
 
 //Doing stuff with tokens
 const tokenExpiry = 600 * 1000; //600s converted to ms by *1000 = 10mins
@@ -101,6 +102,8 @@ export const getFeaturedPlaylists = () =>
     headers,
   });
 
-  export const getUsersPlaylists = () => {
-    axios.get("https://api.spotify.com/v1/users/312r6pbkctzwo6kefda2qr3v4wee/playlists")
-  }
+export const getUsersPlaylists = () => {
+  axios
+    .get("https://api.spotify.com/v1/me/playlists", { headers })
+    
+};

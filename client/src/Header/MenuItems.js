@@ -4,15 +4,15 @@ export const MenuItems = [
         endpoint: '/'
     },
     {
-        title: 'Playful lists',
+        title: 'Playlists',
         endpoint: '/playlists'
     },
     {
-        title: 'Art with a twist',
+        title: 'Artists',
         endpoint: '/playlists'
     },
     {
-        title: 'All the bumps',
+        title: 'Albums',
         endpoint: '/playlists'
     },
     {
