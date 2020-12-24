@@ -1,22 +1,25 @@
 .featuredPlaylistsGrid {
   display: grid;
-  grid-template-columns: 1fr;
+  /* grid-template-columns: 1fr; */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 3fr));
   gap: 1rem;
   text-align: center;
   /* padding: 1rem; */
   /* border: 1px solid red; */
 }
 
-.FeaturedPlaylists .title{
+.FeaturedPlaylists .title {
   margin-left: 10px;
 }
 .playlistDetails {
-  margin: 1rem 0;
-  padding: 1.4rem;
+  /* margin: 1rem 0;
+  padding: 1.4rem; */
   /* border: 1px solid green; */
+  margin: 1.5rem 0;
 }
 .playlistName {
   margin: 0.5rem 0rem;
+  padding: 0.5rem;
 }
 
 @media (min-width: 1082px) {
@@ -32,3 +35,12 @@
     text-align: center;
   }
 }
+
+
+@media(max-width: 320px ) {
+  .featuredPlaylistsGrid{
+    grid-template-columns: repeat(auto-fill, minmax(min(150px, 100%), 2fr));
+
+  }
+}
+

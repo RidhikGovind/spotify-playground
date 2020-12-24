@@ -1,21 +1,25 @@
-.title {
-  margin-left: 10px;
-  text-align: center;
-}
-
-.playlistsGrid {
+/* ***globalstyles below */
+.grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 4fr));
+  
+}
+.details{
+    padding: 1rem;
 }
 
+.name{
+    margin: 0.5rem 0rem;
+  padding: 0.5rem;
+}
 @media (max-width: 616px) {
-  .playlistsGrid {
+  .grid {
     grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 2fr));
   }
 }
 
 @media (max-width: 400px) {
-  .playlistsGrid {
+  .grid {
     grid-template-columns: repeat(auto-fill, minmax(min(150px, 100%), 2fr));
   }
 }

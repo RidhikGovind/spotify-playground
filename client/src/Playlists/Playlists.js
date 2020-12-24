@@ -10,8 +10,9 @@ function Playlists() {
   }, []);
 
   const getData = async () => {
-     const res= await getUsersPlaylists();
-     console.log(res.data.item.images[0].url)
+    const { data } = await getUsersPlaylists();
+    // console.log(data);
+    setItems(data.items);
 
     // console.log(data);
     // setItems(data.playlists.items);
@@ -20,20 +21,22 @@ function Playlists() {
     <div className="Playlists">
       <h2 className="title"> Playlists</h2>
       <div className="PlaylistsSection">
-        {/* {Array.isArray(items) && (
-          <div className="featuredPlaylistsGrid">
-            {items.slice(0, 10).map(({ description, images, name, id }) => (
-              <div className="playlistDetails" key={id}>
-                <img
-                  className="albumCoverImg"
-                  src={images[0].url}
-                  alt="albumcover"
-                />
-                <div className="playlistName">{name}</div>
-              </div>
-            ))}
+        {Array.isArray(items) && (
+          <div className="grid">
+            {items
+              .slice(0, 20)
+              .map(({ description, images, name, id, owner }, i) => (
+                <div className="details" key={i}>
+                  <img
+                    className="albumCoverImg"
+                    src={images[0].url}
+                    alt="playlist cover"
+                  />
+                  <div className="name">{name}</div>
+                </div>
+              ))}
           </div>
-        )} */}
+        )}
       </div>
     </div>
   );

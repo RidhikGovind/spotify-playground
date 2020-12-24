@@ -6,7 +6,7 @@ import FeaturedPlaylists from "../FeaturedPlaylists/FeaturedPlaylists";
 function Home() {
   return (
     <div className="Home">
-      <h2 className="home-title">Home</h2>
+      <h2 className="title">Home</h2>
       <div className="grid-home">
         <NewReleases />
         <FeaturedPlaylists />

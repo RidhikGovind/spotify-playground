@@ -2,27 +2,46 @@
   text-align: center;
   /* padding: 1rem; */
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 3fr));
+
   gap: 1rem;
   border-right: 2px solid rgba(128, 128, 128, 0.123);
 }
 
-.NewReleases .title{
- margin-left: 10px;
+.NewReleases .title {
+  margin-left: 10px;
 }
 
+.albumName {
+  padding: 0.8rem;
+}
 .albumDetails {
-  margin: 1rem 0;
-  /* border: 1px solid brown; */
-  padding: 1rem;
+  margin: 1.5rem 0;
+  border-radius: 10px;
+  
 }
 
 .albumCoverImg {
-  width: 200px;
-  height: 200px;
+  width: 210px;
+  height: 210px;
+  cursor: pointer;
+  transition: 0.3s ease all;
+  object-fit: cover;
+  padding: 1rem;
+  border-radius: 10px;
+
+  -webkit-box-shadow: 1px 26px 10px -12px rgba(0, 0, 0, 0.41);
+  -moz-box-shadow: 1px 26px 10px -12px rgba(0, 0, 0, 0.41);
+  box-shadow: 1px 26px 10px -12px rgba(0, 0, 0, 0.41);
 }
 
+.albumCoverImg:hover {
+  -webkit-box-shadow: -3px 26px 15px -7px rgba(0, 0, 0, 0.41);
+  -moz-box-shadow: -3px 26px 15px -7px rgba(0, 0, 0, 0.41);
+  box-shadow: -3px 26px 15px -7px rgba(0, 0, 0, 0.41);
+}
 
+/* *********globalstylebelow */
 .albumName {
   margin: 0.5rem 0rem;
 }
@@ -41,10 +60,15 @@
   }
 }
 
-
 @media (max-width: 375px) {
   .NewReleases .title {
     font-size: 18px;
     text-align: center;
+  }
+}
+
+@media (max-width: 320px) {
+  .newReleasesGrid {
+    grid-template-columns: repeat(auto-fill, minmax(min(150px, 100%), 2fr));
   }
 }

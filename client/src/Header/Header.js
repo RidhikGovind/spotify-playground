@@ -9,9 +9,6 @@ export const onClickHideScrollbar = (value) => {
   return value;
 };
 
-
-
-
 export default function Header() {
   const [clicked, setClicked] = useState(false);
   const [userData, setUserData] = useState("");

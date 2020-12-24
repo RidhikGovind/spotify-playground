@@ -3,7 +3,6 @@ import "./FeaturedPlaylists.css";
 import { getFeaturedPlaylists } from "../spotify";
 import { getUsersPlaylists } from "../spotify";
 
-
 function FeaturedPlaylists() {
   const [items, setItems] = useState([]);
 
@@ -13,8 +12,7 @@ function FeaturedPlaylists() {
 
   const getData = async () => {
     const { data } = await getFeaturedPlaylists();
-    const { datas } = await getUsersPlaylists();
-console.log(datas)
+
     // console.log(data.playlists.items);
     setItems(data.playlists.items);
   };
@@ -25,8 +23,8 @@ console.log(datas)
       <div className="featuredPlaylistsSection">
         {Array.isArray(items) && (
           <div className="featuredPlaylistsGrid">
-            {items.slice(0, 10).map(({ description, images, name, id }) => (
-              <div className="playlistDetails" key={id}>
+            {items.slice(0, 11).map(({ description, images, name, id }, i) => (
+              <div className="playlistDetails" key={i}>
                 <img
                   className="albumCoverImg"
                   src={images[0].url}

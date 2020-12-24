@@ -22,14 +22,16 @@ function NewReleases() {
       <div className="newReleasesSection">
         {Array.isArray(items) && (
           <div className="newReleasesGrid">
-            {items.slice(0, 10).map(({ artists, images, name, id }) => (
-              <div className="albumDetails" key={id}>
+            {items.slice(0, 10).map(({ artists, images, name, id }, i) => (
+              <div className="albumDetails" key={i}>
                 {/* <div className="artistName">{artists[0].name}</div> */}
+
                 <img
                   className="albumCoverImg"
                   src={images[1].url}
                   alt="albumcover"
                 />
+
                 <div className="albumName">{name}</div>
               </div>
             ))}

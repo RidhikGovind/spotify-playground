@@ -9,7 +9,7 @@ export const MenuItems = [
     },
     {
         title: 'Artists',
-        endpoint: '/playlists'
+        endpoint: '/artists'
     },
     {
         title: 'Albums',

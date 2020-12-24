@@ -102,8 +102,14 @@ export const getFeaturedPlaylists = () =>
     headers,
   });
 
-export const getUsersPlaylists = () => {
-  axios
-    .get("https://api.spotify.com/v1/me/playlists", { headers })
-    
-};
+export const getUsersPlaylists = () =>
+  axios.get("https://api.spotify.com/v1/me/playlists", { headers });
+
+export const getUsersArtists = () =>
+  axios.get(
+    "https://api.spotify.com/v1/me/top/artists?limit=50&time_range=short_term",
+    { headers }
+  );
+
+export const getArtist = artistId =>
+  axios.get(`https://api.spotify.com/v1/artists/${artistId}`, { headers });
