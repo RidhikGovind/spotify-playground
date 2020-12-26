@@ -1,0 +1,36 @@
+.Track{
+    margin-top: 3rem;
+    
+}
+
+.trackGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.trackCoverImg{
+    margin-bottom: 2rem;
+}
+
+.trackName{
+    font-size: 2rem;
+}
+
+.trackArtistsName{
+    font-size: 1.5rem;
+}
+
+.trackDetailsLeft{
+    border-right: 3px solid rgba(131, 131, 131, 0.233);
+}
+
+.trackDetailsRight{
+    font-size: 1.5rem;
+}
+
+.trackDetailsRight>div{
+    margin: 0.5rem;
+}

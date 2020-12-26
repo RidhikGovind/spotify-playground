@@ -1,31 +1,27 @@
-.TopTracks{
-    margin-top: 1rem;
+.TopTracks {
+  margin-top: 1rem;
+  font-size: 20px;
 }
 
-.topTracksSection{
-    margin-top: 2rem;
+.topTracksSection {
+  margin-top: 2rem;
 }
 
-.topTrackGrid{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 4fr));
-    grid: 2rem;
-    text-align: center;
-    }
-
-.topTrackDetails{
-    margin: 1rem 0;
-    padding: 1rem;
+.topTrackGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 4fr));
+  grid: 2rem;
+  text-align: center;
+}
+.topTrackDetails {
+  padding: 1rem;
 }
 
-.trackCoverImg{
-    border-radius: 20px;
+
+.trackCoverImg {
+  border-radius: 20px;
 }
 
-.trackDetails{
-    margin-top: 1rem;
-}
-
-.trackName{
-    font-weight: 500;
+.topTrackName {
+  font-weight: 500;
 }

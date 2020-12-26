@@ -7,6 +7,7 @@ import Artists from "./Artists/Artists";
 import ArtistOpen from "./ArtistOpen/ArtistOpen";
 import FavouriteSongs from "./FavouriteSongs/FavouriteSongs";
 import TopTracks from "./TopTracks/TopTracks";
+import Track from "./Track/Track";
 import Header from "./Header/Header";
 
 function Main() {
@@ -26,6 +27,8 @@ function Main() {
           <Route path="/favouriteSongs" component={FavouriteSongs}></Route>
 
           <Route path="/topTracks" component={TopTracks}></Route>
+
+          <Route path="/track/:trackId" component={Track}></Route>
         </div>
       </div>
     </Router>

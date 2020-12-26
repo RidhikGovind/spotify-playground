@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./TopTracks.css";
 import { getUsersTopTracks } from "../spotify";
+import {  Link } from "react-router-dom";
 
 function TopTracks() {
   const [items, setItems] = useState([]);
@@ -12,7 +13,7 @@ function TopTracks() {
   const getData = async () => {
     const { data } = await getUsersTopTracks();
 
-    console.log(data.items);
+    // console.log(data.items);
     setItems(data.items);
   };
 
@@ -23,19 +24,22 @@ function TopTracks() {
       <div className="topTracksSection">
         {Array.isArray(items) && (
           <div className="topTrackGrid">
-            {items.slice(0, 19).map(({ album, artists, name }, i) => (
+            {items.slice(0, 20).map(({ album, artists, name, id }, i) => (
               <div className="topTrackDetails" key={i}>
                 <div className="albumImgSection">
+                  <Link to={`/track/${id}`}>
                   <img
                     className="trackCoverImg"
                     src={album.images ? album.images[1].url : ""}
                     alt="albumcover"
                   />
+                  </Link>
+                  
                 </div>
 
                 <div className="trackDetails">
-                  <div className="trackName">{name}</div>
-                  <div className="trackArtistsName">{artists[0].name}</div>
+                  <div className="topTrackName">{name}</div>
+                  <div className="topTrackArtistsName">{artists[0].name}</div>
                 </div>
               </div>
             ))}

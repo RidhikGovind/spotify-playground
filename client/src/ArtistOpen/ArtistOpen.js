@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./ArtistOpen.css";
 import { getArtist } from "../spotify";
-import PropTypes from "prop-types";
+
 
 function ArtistOpen({ match: { params } }) {
   const [item, setItem] = useState("");

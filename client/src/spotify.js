@@ -124,3 +124,6 @@ export const getUsersTopTracks = () =>
     "https://api.spotify.com/v1/me/top/tracks?time_range=long_term&limit=20&offset=0",
     { headers }
   );
+
+export const getTrack = (trackId) =>
+  axios.get(`https://api.spotify.com/v1/tracks/${trackId}`, { headers });
