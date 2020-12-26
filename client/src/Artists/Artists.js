@@ -20,6 +20,7 @@ function Artists() {
   return (
     <div className="Artists">
       <h2 className="title">Top Artists</h2>
+      <h3>Only the best of the voices you love</h3>
       <div className="topArtistsSection">
         {Array.isArray(items) && (
           <div className="grid">

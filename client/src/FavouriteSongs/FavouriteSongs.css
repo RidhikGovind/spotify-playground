@@ -1,0 +1,40 @@
+.favouriteSongsSection {
+  margin-top: 2rem;
+}
+
+.favouriteSongsGrid {
+  padding: 0.5rem;
+}
+
+.favouriteSongsDetails {
+  display: flex;
+  border: 2px solid black;
+  margin: 0.7rem 0;
+  padding: 0.8rem;
+  border-radius: 20px;
+  transition: 0.5s ease all;
+}
+
+.albumImgSection {
+  padding-right: 2rem;
+}
+
+.songDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 1rem;
+  border-left: 2px solid rgba(128, 128, 128, 0.39);
+  margin-left: 1.5rem;
+}
+
+.songDetails > div {
+  margin: 0.1rem;
+}
+
+.songName {
+  font-weight: 500;
+}
+.artistname {
+  margin-right: 1.3rem;
+}

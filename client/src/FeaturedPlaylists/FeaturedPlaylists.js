@@ -23,7 +23,7 @@ function FeaturedPlaylists() {
       <div className="featuredPlaylistsSection">
         {Array.isArray(items) && (
           <div className="featuredPlaylistsGrid">
-            {items.slice(0, 11).map(({ description, images, name, id }, i) => (
+            {items.slice(0, 10).map(({ description, images, name, id }, i) => (
               <div className="playlistDetails" key={i}>
                 <img
                   className="albumCoverImg"

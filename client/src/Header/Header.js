@@ -33,7 +33,7 @@ export default function Header() {
   };
 
   return (
-    <div className="header">
+    <div className="Header">
       <div className="leftHeader">
         <div className="menuIcon" onClick={() => handleClicked()}>
           <i className={clicked ? "" : "fas fa-bars fa-2x"}></i>

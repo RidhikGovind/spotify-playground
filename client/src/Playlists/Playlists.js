@@ -20,6 +20,7 @@ function Playlists() {
   return (
     <div className="Playlists">
       <h2 className="title"> Playlists</h2>
+      <h3>The occasional crazy playlists that you have saved</h3>
       <div className="PlaylistsSection">
         {Array.isArray(items) && (
           <div className="grid">

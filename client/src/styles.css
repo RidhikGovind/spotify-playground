@@ -1,3 +1,8 @@
+:root{
+  --spotify-green: #1DB954;
+}
+
+
 * {
   padding: 0;
   margin: 0;
@@ -46,25 +51,11 @@ li {
 }
 
 .Main {
-  /* background: lightskyblue; */
+
   position: relative;
   height: 100%;
 }
-/* .menuSideBar{
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 50%;
-  background: rgb(0, 0, 0);
-  transform: translateX(-100vw);
-} */
 
-/* @media (max-width: 690px) {
-  .menuSideBar {
-    transform: translateX(0vw);
-  }
-} */
 
 .mainGrid {
   display: grid;
@@ -72,8 +63,4 @@ li {
   height: 100%;
 }
 
-/* **setting the display none for now*** */
-.sidebar {
-  background: lightgreen;
-  /* display: none; */
-}
+

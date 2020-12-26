@@ -1,6 +1,5 @@
 import axios from "axios";
 import hash from "./hash";
-import { userId } from "./Header/Header";
 
 //Doing stuff with tokens
 const tokenExpiry = 600 * 1000; //600s converted to ms by *1000 = 10mins
@@ -111,5 +110,17 @@ export const getUsersArtists = () =>
     { headers }
   );
 
-export const getArtist = artistId =>
+export const getArtist = (artistId) =>
   axios.get(`https://api.spotify.com/v1/artists/${artistId}`, { headers });
+
+export const getUsersSavedTracks = () =>
+  axios.get(
+    "https://api.spotify.com/v1/me/tracks?market=IN&limit=20&offset=0",
+    { headers }
+  );
+
+export const getUsersTopTracks = () =>
+  axios.get(
+    "https://api.spotify.com/v1/me/top/tracks?time_range=long_term&limit=20&offset=0",
+    { headers }
+  );

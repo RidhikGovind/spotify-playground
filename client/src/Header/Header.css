@@ -1,27 +1,24 @@
-.header {
- 
+.Header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.4rem;
 }
 
-@keyframes slowShow{
-  0%{
+@keyframes slowShow {
+  0% {
     opacity: 0;
-    
   }
-  25%{
+  25% {
     opacity: 0.25;
-
   }
-  50%{
-    opacity: 0.50;
+  50% {
+    opacity: 0.5;
   }
-  75%{
-     opacity: 0.75;
+  75% {
+    opacity: 0.75;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }
@@ -35,28 +32,20 @@
   background: rgb(5, 5, 5);
   color: white;
   height: 100%;
-  display:none;
+  display: none;
   z-index: 1;
   animation: slowShow 0.3s;
- 
-  
 }
 
-.show{
+.show {
   display: block;
- 
- 
-
-  
 }
-.fas .fa-bar{
+.fas .fa-bar {
   z-index: 10;
   cursor: pointer;
-
 }
 
-
-.close{
+.close {
   position: relative;
   padding-left: 20px;
   padding-top: 20px;
@@ -67,23 +56,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   margin-top: 1rem;
-  
 }
 
-.menuLinks{
+.menuLinks {
   color: white;
   padding: 1rem;
   width: 100%;
 }
 
-.menuLinks:hover{
-  background: #1DB954;
+.menuLinks:hover {
+  background: var(--spotify-green);
 }
 
-
-.header .rightHeader {
+.Header .rightHeader {
   display: flex;
   align-items: center;
 }
@@ -98,6 +85,6 @@
   border-radius: 50%;
 }
 
-.logoutBtn a:hover{
-  color:  #1DB954;
+.logoutBtn a:hover {
+  color: #1db954;
 }
