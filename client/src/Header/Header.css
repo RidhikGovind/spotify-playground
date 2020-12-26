@@ -76,7 +76,7 @@
 }
 
 .profileImage {
-  margin: 10px 30px 10px 10px;
+  margin: 10px 20px 10px 10px;
 }
 
 .profileImage img {
@@ -85,6 +85,23 @@
   border-radius: 50%;
 }
 
+.logoutBtn{
+ 
+  border: 1px solid white;
+  overflow: hidden;
+  padding: 0.4rem 0;
+  border-radius: 20px;
+}
+.logoutBtn a{
+  color: black;
+  padding: 1rem;
+  
+ 
+  
+}
 .logoutBtn a:hover {
-  color: #1db954;
+  color: white;
+  background: var(--spotify-green);
+  animation: slowShow 0.2s;
+ 
 }

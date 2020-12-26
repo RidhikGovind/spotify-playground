@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./styles.css";
-import Login from "./Login";
+import Login from "./Login/Login";
 import Player from "./Player";
 import EmptyPlayer from "./EmptyPlayer";
 import Main from './Main'
