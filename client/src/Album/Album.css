@@ -3,8 +3,8 @@
   transition: 0.5s ease all;
   background: linear-gradient(#fff, #000);
   background: linear-gradient(to bottom, #ffffff 30%, #8a9dff 86%);
-  padding: 2rem 0 7rem 0;
-  height: 100vh;
+  padding: 2rem 0 2rem 0;
+  
   
 }
 
@@ -12,6 +12,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   text-align: center;
+  
 }
 .albumCoverImage {
   border-radius: 20px;
@@ -69,7 +70,16 @@
   color: black;
 }
 
+@media(min-width: 730px){
+  .Album{
+    height: 100vh;
+  }
+}
+
 @media (max-width: 730px) {
+  .Album{
+    overflow: hidden;
+  }
   .albumGrid {
     display: flex;
     flex-direction: column;
@@ -97,5 +107,6 @@
 
   .Album{
     height: 100%;
+   
   }
 }

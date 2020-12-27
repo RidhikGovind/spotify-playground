@@ -3,8 +3,8 @@
   background: linear-gradient(to bottom, #ffffff 35%, #fff27f 150%);
   color: var(--black-light);
   padding: 3rem 0 4rem 0;
-  height: 100vh;
-  overflow: hidden;
+  
+ 
 }
 
 .trackGrid {
@@ -38,6 +38,13 @@
 
 .trackDetailsRight > div {
   margin: 0.5rem;
+}
+
+@media(min-width: 730px){
+  .Track{
+    height: 100vh;
+    overflow: hidden;
+  }
 }
 
 @media (max-width: 730px) {
