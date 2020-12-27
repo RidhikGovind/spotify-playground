@@ -53,9 +53,16 @@
 }
 
 .menuIcon {
-  margin-left: 0.5rem;
+  /* display: flex; */
 }
 
+.fa-spotify {
+  color: var(--spotify-green);
+}
+
+.github-icon {
+  /* padding: 0 0.5rem; */
+}
 .menusidebar li {
   display: flex;
   justify-content: center;
@@ -74,10 +81,34 @@
   background: var(--spotify-green);
 }
 
-.Header .rightHeader {
+.rightHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.sideIcons {
+  background: black;
+  color: white;
   display: flex;
   align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 900;
+  padding: 0.2rem;
+  margin: 0.3rem;
 }
+
+.sideIcons a {
+  color: white;
+} 
+.sideIcons i {
+  font-size: 25px;
+}
+
+
 
 .profileImage {
   margin: 10px 20px 10px 10px;
@@ -104,4 +135,23 @@
   color: white;
   background: var(--spotify-green);
   animation: slowShow 0.2s;
+}
+
+.profileSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 320px) {
+  /* .rightHeader {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .profileSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
 }

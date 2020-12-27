@@ -51,15 +51,21 @@ export default function Header() {
       </div>
 
       <div className="rightHeader">
-        <div className="profileName">{userData.display_name}</div>
-        <div className="profileImage">
-          {userData.images ? (
-            <img src={userData.images[0].url} alt="blah" />
-          ) : null}
+        <div className="profileSection">
+          <div className="profileName">{userData.display_name}</div>
+          <div className="profileImage">
+            {userData.images ? (
+              <img src={userData.images[0].url} alt="blah" />
+            ) : null}
+          </div>
         </div>
-        <div className="logoutBtn">
-          <a href="#" onClick={() => logout()}>
-            Logout
+
+        <div className="sideIcons">
+          <i className="fa fa-sign-out " onClick={() => logout()}></i>
+        </div>
+        <div className="sideIcons">
+          <a href="https://github.com/RidhikGovind" target="_blank">
+            <i className="fa fa-github fa-2x"></i>
           </a>
         </div>
       </div>
