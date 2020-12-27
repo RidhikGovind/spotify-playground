@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./FavouriteSongs.css";
 import { getUsersSavedTracks } from "../spotify";
+import { Link } from "react-router-dom";
 
 function FavouriteSongs() {
   const [items, setItems] = useState([]);
@@ -23,15 +24,17 @@ function FavouriteSongs() {
       <div className="favouriteSongsSection">
         {Array.isArray(items) && (
           <div className="favouriteSongsGrid">
-            {items.slice(0, 19).map(({ track}, i) => (
+            {items.slice(0, 19).map(({ track }, i) => (
+              <Link to={`/track/${track.id}`} className="link">
               <div className="favouriteSongsDetails" key={i}>
-                <div className="albumImgSection">
-                  <img
-                    className="songCoverImg"
-                    src={track.album.images ? track.album.images[2].url : ""}
-                    alt="albumcover"
-                  />
-                </div>
+                  <div className="albumImgSection">
+                    <img
+                      className="songCoverImg"
+                      src={track.album.images ? track.album.images[2].url : ""}
+                      alt="albumcover"
+                    />
+                  </div>
+                
 
                 <div className="songDetails">
                   <div className="songName">{track.name}</div>
@@ -43,6 +46,7 @@ function FavouriteSongs() {
                   </div>
                 </div>
               </div>
+              </Link>
             ))}
           </div>
         )}

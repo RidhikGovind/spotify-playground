@@ -29,7 +29,7 @@ function TopTracks() {
                 <div className="albumImgSection">
                   <Link to={`/track/${id}`}>
                   <img
-                    className="trackCoverImg"
+                    className="toptrackCoverImg"
                     src={album.images ? album.images[1].url : ""}
                     alt="albumcover"
                   />

@@ -5,14 +5,18 @@
 .favouriteSongsGrid {
   padding: 0.5rem;
 }
+.favouriteSongsGrid .link{
+  color: black;
+}
 
 .favouriteSongsDetails {
   display: flex;
-  border: 2px solid black;
-  margin: 0.7rem 0;
+  
+  margin: 1.5rem 0;
   padding: 0.8rem;
   border-radius: 20px;
   transition: 0.5s ease all;
+  background: linear-gradient(#b3e5fce8 0%,#ffffff 80%);
 }
 
 .albumImgSection {

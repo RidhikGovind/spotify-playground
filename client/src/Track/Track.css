@@ -1,6 +1,6 @@
 .Track {
  
-  background: linear-gradient(to bottom, #ffffff 35%, #FFD54F 150%);
+  background: linear-gradient( #ffffff 35%, #FFD54F 150%);
   color: var(--black-light);
   padding: 3rem 0 4rem 0;
   

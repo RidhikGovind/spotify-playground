@@ -2,6 +2,8 @@
   margin-top: 1rem;
   font-size: 20px;
   padding-bottom: 4rem;
+  background: linear-gradient( #ffffff 2%,#880E4F 150%);
+
 }
 
 .topTracksSection {
@@ -18,9 +20,9 @@
   padding: 1rem;
 }
 
-
-.trackCoverImg {
+.toptrackCoverImg {
   border-radius: 20px;
+  margin-bottom: 0.5rem;
 }
 
 .topTrackName {

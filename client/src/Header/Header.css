@@ -52,17 +52,10 @@
   cursor: pointer;
 }
 
-.menuIcon {
-  /* display: flex; */
-}
-
 .fa-spotify {
   color: var(--spotify-green);
 }
 
-.github-icon {
-  /* padding: 0 0.5rem; */
-}
 .menusidebar li {
   display: flex;
   justify-content: center;
@@ -103,12 +96,10 @@
 
 .sideIcons a {
   color: white;
-} 
+}
 .sideIcons i {
   font-size: 25px;
 }
-
-
 
 .profileImage {
   margin: 10px 20px 10px 10px;

@@ -55,7 +55,10 @@ export default function Header() {
           <div className="profileName">{userData.display_name}</div>
           <div className="profileImage">
             {userData.images ? (
-              <img src={userData.images[0].url} alt="blah" />
+              <img
+                src={userData.images ? userData.images[0].url : ""}
+                alt="Img"
+              />
             ) : null}
           </div>
         </div>
