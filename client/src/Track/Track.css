@@ -1,8 +1,8 @@
 .Track {
-  padding: 3rem 0 0rem 0;
+ 
   background: linear-gradient(to bottom, #ffffff 35%, #fff27f 150%);
   color: var(--black-light);
-  padding: 2rem 0 4rem 0;
+  padding: 3rem 0 4rem 0;
   height: 100vh;
   overflow: hidden;
 }

@@ -3,9 +3,9 @@
   transition: 0.5s ease all;
   background: linear-gradient(#fff, #000);
   background: linear-gradient(to bottom, #ffffff 30%, #8a9dff 86%);
-  padding: 2rem 0 4rem 0;
+  padding: 2rem 0 7rem 0;
   height: 100vh;
-  overflow: hidden;
+  
 }
 
 .albumGrid {
@@ -93,5 +93,9 @@
   .albumTrackName {
     margin: 0;
     font-size: 1.3rem;
+  }
+
+  .Album{
+    height: 100%;
   }
 }
