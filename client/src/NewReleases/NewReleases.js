@@ -23,7 +23,7 @@ function NewReleases() {
       <div className="newReleasesSection">
         {Array.isArray(items) && (
           <div className="newReleasesGrid">
-            {items.slice(0, 20).map(({ artists, images, name, id }, i) => (
+            {items.slice(0, 10).map(({ artists, images, name, id }, i) => (
               <div className="newReleasesDetails" key={i}>
                 
                 <Link to={`/album/${id}`}>

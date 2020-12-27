@@ -1,8 +1,9 @@
 .Artists {
-  margin-bottom: 4rem;
+  padding-bottom: 4rem;
+  background: linear-gradient(#ffffff, #f8bbd0);
 }
 
-/* ***globalstyles below */
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 4fr));
@@ -18,15 +19,14 @@
   padding: 0.5rem;
 }
 
-
-.topArtistCoverImg{
+.topArtistCoverImg {
   transition: 0.5s ease all;
+  height: 300px;
+  width: 300px;
 }
 
-.topArtistCoverImg:hover{
+.topArtistCoverImg:hover {
   transform: scale(1.05);
- 
- 
 }
 
 @media (max-width: 616px) {
@@ -41,7 +41,7 @@
   }
 }
 
-@media(max-width: 1220px){
+@media (max-width: 1220px) {
   .topArtistCoverImg {
     width: 210px;
     height: 210px;

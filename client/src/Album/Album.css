@@ -1,8 +1,11 @@
 .Album {
-  padding: 3rem 0 4rem 0;
-  background: var(--black-light);
-  color: var(--white-light);
+  color: var(--black-light);
   transition: 0.5s ease all;
+  background: linear-gradient(#fff, #000);
+  background: linear-gradient(to bottom, #ffffff 30%, #8a9dff 86%);
+  padding: 2rem 0 4rem 0;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .albumGrid {
@@ -51,7 +54,7 @@
 .albumTrackDetails:hover {
   background-color: #fee2f8;
   background-image: linear-gradient(315deg, #93ffffd0 20%, #dcf8ef 40%);
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .albumDetailsRight h2 {

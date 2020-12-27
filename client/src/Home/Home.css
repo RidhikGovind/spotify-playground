@@ -1,5 +1,6 @@
 .Home{
-  margin-bottom: 4rem;
+  /* padding-bottom: 4rem; */
+  background: linear-gradient(to bottom, #ffffff 35%, #1db954 150%);
 }
 
 .grid-home {

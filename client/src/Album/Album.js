@@ -40,11 +40,11 @@ function Album({ match: { params } }) {
           <h2>Tracks</h2>
           {tracks
             ? tracks.map(({ artists, name, id }) => (
-                <div className="albumTrackDetails">
-                  <Link to={`/track/${id}`}>
+              <Link to={`/track/${id}`}>
+                  <div className="albumTrackDetails">
                     <div className="albumTrackName">{name}</div>
-                  </Link>
                 </div>
+                  </Link>
               ))
             : ""}
         </div>
