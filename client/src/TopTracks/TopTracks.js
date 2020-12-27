@@ -24,7 +24,7 @@ function TopTracks() {
       <div className="topTracksSection">
         {Array.isArray(items) && (
           <div className="topTrackGrid">
-            {items.slice(0, 20).map(({ album, artists, name, id }, i) => (
+            {items.slice(0, 30).map(({ album, artists, name, id }, i) => (
               <div className="topTrackDetails" key={i}>
                 <div className="albumImgSection">
                   <Link to={`/track/${id}`}>

@@ -1,6 +1,8 @@
 :root{
   --spotify-green: #1ad15a;
   --spotify-green-light: #5bf892fa;
+  --black-light: rgba(0,0,0,0.9);
+  --white-light: whitesmoke;
 }
 
 

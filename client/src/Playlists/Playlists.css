@@ -1,6 +1,21 @@
+.Playlists{
+  margin-bottom: 4rem;
+}
+
 .title {
   margin-left: 10px;
   text-align: center;
+}
+
+.playlistCoverImg{
+  width: 300px;
+  height: 300px;
+  transition: 0.5s ease all;
+  
+}
+
+.playlistCoverImg:hover{
+  transform: scale(1.05)
 }
 
 .playlistsGrid {
@@ -17,5 +32,18 @@
 @media (max-width: 400px) {
   .playlistsGrid {
     grid-template-columns: repeat(auto-fill, minmax(min(150px, 100%), 2fr));
+  }
+}
+
+@media(max-width: 1220px){
+  .playlistCoverImg {
+    width: 210px;
+    height: 210px;
+  }
+}
+@media (max-width: 500px) {
+  .playlistCoverImg {
+    width: 145px;
+    height: 145px;
   }
 }

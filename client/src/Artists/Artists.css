@@ -1,17 +1,34 @@
+.Artists {
+  margin-bottom: 4rem;
+}
+
 /* ***globalstyles below */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 4fr));
-  
+  text-align: center;
+  gap: 1rem;
 }
-.details{
-    padding: 1rem;
+.details {
+  padding: 1rem;
 }
 
-.name{
-    margin: 0.5rem 0rem;
+.name {
+  margin: 0.5rem 0rem;
   padding: 0.5rem;
 }
+
+
+.topArtistCoverImg{
+  transition: 0.5s ease all;
+}
+
+.topArtistCoverImg:hover{
+  transform: scale(1.05);
+ 
+ 
+}
+
 @media (max-width: 616px) {
   .grid {
     grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 2fr));
@@ -21,5 +38,18 @@
 @media (max-width: 400px) {
   .grid {
     grid-template-columns: repeat(auto-fill, minmax(min(150px, 100%), 2fr));
+  }
+}
+
+@media(max-width: 1220px){
+  .topArtistCoverImg {
+    width: 210px;
+    height: 210px;
+  }
+}
+@media (max-width: 500px) {
+  .topArtistCoverImg {
+    width: 145px;
+    height: 145px;
   }
 }

@@ -94,12 +94,18 @@ export const getUserDeets = () =>
   axios.get("https://api.spotify.com/v1/me", { headers });
 
 export const getNewReleases = () =>
-  axios.get("https://api.spotify.com/v1/browse/new-releases", { headers });
+  axios.get(
+    "https://api.spotify.com/v1/browse/new-releases?country=IN&offset=0&limit=20",
+    { headers }
+  );
 
 export const getFeaturedPlaylists = () =>
-  axios.get("https://api.spotify.com/v1/browse/featured-playlists", {
-    headers,
-  });
+  axios.get(
+    "https://api.spotify.com/v1/browse/featured-playlists?country=IN&limit=20&offset=0",
+    {
+      headers,
+    }
+  );
 
 export const getUsersPlaylists = () =>
   axios.get("https://api.spotify.com/v1/me/playlists", { headers });
@@ -121,9 +127,12 @@ export const getUsersSavedTracks = () =>
 
 export const getUsersTopTracks = () =>
   axios.get(
-    "https://api.spotify.com/v1/me/top/tracks?time_range=long_term&limit=20&offset=0",
+    "https://api.spotify.com/v1/me/top/tracks?time_range=long_term&limit=30&offset=0",
     { headers }
   );
 
 export const getTrack = (trackId) =>
   axios.get(`https://api.spotify.com/v1/tracks/${trackId}`, { headers });
+
+export const getAlbum = (albumId) =>
+  axios.get(`https://api.spotify.com/v1/albums/${albumId}`, { headers });

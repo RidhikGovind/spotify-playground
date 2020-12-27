@@ -1,3 +1,7 @@
+.Home{
+  margin-bottom: 4rem;
+}
+
 .grid-home {
   display: grid;
   grid-template-columns: 1fr 1fr;

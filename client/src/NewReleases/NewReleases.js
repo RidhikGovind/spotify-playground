@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./NewReleases.css";
 import { getNewReleases } from "../spotify";
+import { Link } from "react-router-dom";
 
 function NewReleases() {
   const [items, setItems] = useState([]);
@@ -22,17 +23,19 @@ function NewReleases() {
       <div className="newReleasesSection">
         {Array.isArray(items) && (
           <div className="newReleasesGrid">
-            {items.slice(0, 10).map(({ artists, images, name, id }, i) => (
-              <div className="albumDetails" key={i}>
-                {/* <div className="artistName">{artists[0].name}</div> */}
-
-                <img
-                  className="albumCoverImg"
+            {items.slice(0, 20).map(({ artists, images, name, id }, i) => (
+              <div className="newReleasesDetails" key={i}>
+                
+                <Link to={`/album/${id}`}>
+                 <img
+                  className="newReleasesCoverImg"
                   src={images[1].url}
-                  alt="albumcover"
+                  alt="newReleases album cover"
                 />
+                </Link>
+               
 
-                <div className="albumName">{name}</div>
+                <div className="newReleasesName">{name}</div>
               </div>
             ))}
           </div>

@@ -8,6 +8,7 @@ import ArtistOpen from "./ArtistOpen/ArtistOpen";
 import FavouriteSongs from "./FavouriteSongs/FavouriteSongs";
 import TopTracks from "./TopTracks/TopTracks";
 import Track from "./Track/Track";
+import Album from "./Album/Album";
 import Header from "./Header/Header";
 
 function Main() {
@@ -29,6 +30,8 @@ function Main() {
           <Route path="/topTracks" component={TopTracks}></Route>
 
           <Route path="/track/:trackId" component={Track}></Route>
+
+          <Route path="/album/:albumId" component={Album}></Route>
         </div>
       </div>
     </Router>

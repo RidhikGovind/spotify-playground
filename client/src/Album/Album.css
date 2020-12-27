@@ -1,0 +1,94 @@
+.Album {
+  padding: 3rem 0 4rem 0;
+  background: var(--black-light);
+  color: var(--white-light);
+  transition: 0.5s ease all;
+}
+
+.albumGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+}
+.albumCoverImage {
+  border-radius: 20px;
+}
+.albumName {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.albumArtistsName {
+  font-size: 1.5rem;
+}
+
+.albumDetailsLeft {
+  border-right: 3px solid rgba(131, 131, 131, 0.233);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.albumDetailsRight {
+  width: 100%;
+}
+
+.albumTrackDetails {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border: 1px solid grey;
+  margin: 1rem 4rem;
+  padding: 1rem;
+  padding: 0.5rem;
+  border-radius: 12px;
+  align-items: flex-start;
+  cursor: pointer;
+  background-color: #fee2f8;
+  background-image: linear-gradient(315deg, #fee2f8 0%, #dcf8ef 74%);
+  transition: 0.5s ease all;
+}
+.albumTrackDetails:hover {
+  background-color: #fee2f8;
+  background-image: linear-gradient(315deg, #93ffffd0 20%, #dcf8ef 40%);
+  transform: scale(1.1);
+}
+
+.albumDetailsRight h2 {
+  margin-bottom: 2rem;
+}
+.albumTrackName {
+  font-size: 1.5rem;
+  margin-left: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: black;
+}
+
+@media (max-width: 730px) {
+  .albumGrid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .albumDetailsLeft {
+    border-bottom: 3px solid rgba(131, 131, 131, 0.233);
+    border-right: none;
+  }
+
+  .albumArtistsName {
+    margin-bottom: 2rem;
+  }
+
+  .albumDetailsRight {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .albumTrackName {
+    margin: 0;
+    font-size: 1.3rem;
+  }
+}

@@ -11,7 +11,7 @@
 .FeaturedPlaylists .title {
   margin-left: 10px;
 }
-.playlistDetails {
+.featuredplaylistDetails {
   /* margin: 1rem 0;
   padding: 1.4rem; */
   /* border: 1px solid green; */
@@ -44,3 +44,36 @@
   }
 }
 
+
+.featuredPlaylistCoverImg {
+  width: 300px;
+  height: 300px;
+  cursor: pointer;
+  transition: 0.3s ease all;
+  object-fit: cover;
+  padding: 1rem;
+  border-radius: 10px;
+
+  -webkit-box-shadow: 1px 26px 10px -12px rgba(0, 0, 0, 0.41);
+  -moz-box-shadow: 1px 26px 10px -12px rgba(0, 0, 0, 0.41);
+  box-shadow: 1px 26px 10px -12px rgba(0, 0, 0, 0.41);
+}
+
+.featuredPlaylistCoverImg:hover {
+  -webkit-box-shadow: -3px 26px 15px -7px rgba(0, 0, 0, 0.41);
+  -moz-box-shadow: -3px 26px 15px -7px rgba(0, 0, 0, 0.41);
+  box-shadow: -3px 26px 15px -7px rgba(0, 0, 0, 0.41);
+}
+
+@media(max-width: 1220px){
+  .featuredPlaylistCoverImg {
+    width: 210px;
+    height: 210px;
+  }
+}
+@media (max-width: 500px) {
+  .featuredPlaylistCoverImg {
+    width: 145px;
+    height: 145px;
+  }
+}

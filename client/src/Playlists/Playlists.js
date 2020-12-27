@@ -28,11 +28,14 @@ function Playlists() {
               .slice(0, 20)
               .map(({ description, images, name, id, owner }, i) => (
                 <div className="details" key={i}>
+                 
+
                   <img
-                    className="albumCoverImg"
-                    src={images[0].url}
+                    className="playlistCoverImg"
+                    src={images[0] ? images[0].url: ""}
                     alt="playlist cover"
                   />
+                  
                   <div className="name">{name}</div>
                 </div>
               ))}

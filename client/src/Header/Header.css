@@ -85,23 +85,18 @@
   border-radius: 50%;
 }
 
-.logoutBtn{
- 
+.logoutBtn {
   border: 1px solid white;
   overflow: hidden;
   padding: 0.4rem 0;
   border-radius: 20px;
 }
-.logoutBtn a{
+.logoutBtn a {
   color: black;
   padding: 1rem;
-  
- 
-  
 }
 .logoutBtn a:hover {
   color: white;
   background: var(--spotify-green);
   animation: slowShow 0.2s;
- 
 }

@@ -13,7 +13,7 @@ function Track({ match: { params } }) {
     const { data } = await getTrack(params.trackId);
 
     setItem(data);
-    console.log(item);
+    // console.log(item);
   };
 
   return (
