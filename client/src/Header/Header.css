@@ -23,7 +23,7 @@
   }
 }
 
-.app-title{
+.app-title {
   margin-left: 1rem;
 }
 
@@ -36,13 +36,14 @@
   top: 0;
   left: 0;
   height: 100vh;
-  width: 50%;
+  width: 40%;
   background: rgb(5, 5, 5);
   color: white;
   height: 100%;
   display: none;
   z-index: 1;
   animation: slowShow 0.3s;
+  
 }
 
 .show {
@@ -52,7 +53,19 @@
   z-index: 10;
   cursor: pointer;
 }
-
+.makerInfo {
+  margin: 5rem 0.5rem;
+  
+  text-align: center;
+}
+.makerInfo i {
+  color: red;
+}
+.makerInfo a{
+  color: white;
+  text-decoration: underline;
+  margin-top: 0.2rem;
+}
 .close {
   position: relative;
   padding-left: 20px;
@@ -148,8 +161,14 @@
   }
 }
 @media (max-width: 530px) {
-  .app-title{
+  .app-title {
     margin-left: 1rem;
     display: none;
+  }
+}
+
+@media(max-width: 435px) {
+  .menusidebar{
+    width: 50%
   }
 }

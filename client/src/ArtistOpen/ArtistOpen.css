@@ -1,7 +1,7 @@
 .Artist {
   display: flex;
   flex-direction: column;
-  padding: 6.5rem;
+  
   background: linear-gradient(#ffffff, #ffcc80);
 }
 

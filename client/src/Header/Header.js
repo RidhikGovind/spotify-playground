@@ -50,6 +50,12 @@ export default function Header() {
             </Link>
           </li>
         ))}
+        <div className="makerInfo">
+          Made with <i className="fa fa-heart"></i> by{" "}
+          <a href="http://ridhikgovind.netlify.app/" target="_blank">
+            Ridhik Govind
+          </a>
+        </div>
       </div>
 
       <div className="rightHeader">
@@ -61,7 +67,9 @@ export default function Header() {
                 src={userData.images[0] ? userData.images[0].url : ""}
                 alt=":)"
               />
-            ) : ""}
+            ) : (
+              ""
+            )}
           </div>
         </div>
 
