@@ -34,14 +34,13 @@ export default function Header() {
 
   return (
     <div className="Header">
-      
       <div className="leftHeader">
         <div className="menuIcon" onClick={() => handleClicked()}>
           <i className={clicked ? "" : "fas fa-bars fa-2x"}></i>
-          {/* <h2 className="app-title">Spotify Playground</h2> */}
+          <h2 className="app-title">Spotify Playground</h2>
         </div>
       </div>
-     
+
       <div className={clicked ? "menusidebar show " : "menusidebar "}>
         <i className="fas fa-times fa-2x close" onClick={handleClicked}></i>
         {MenuItems.map((item, index) => (
@@ -59,15 +58,15 @@ export default function Header() {
           <div className="profileImage">
             {userData.images ? (
               <img
-                src={userData.images ? userData.images[0].url : ""}
-                alt="Img"
+                src={userData.images[0] ? userData.images[0].url : ""}
+                alt=":)"
               />
-            ) : null}
+            ) : ""}
           </div>
         </div>
 
         <div className="sideIcons">
-          <i className="fa fa-sign-out " onClick={() => logout()}></i>
+          <i className="fa fa-sign-out" onClick={() => logout()}></i>
         </div>
         <div className="sideIcons">
           <a href="https://github.com/RidhikGovind" target="_blank">

@@ -32,7 +32,7 @@ function FeaturedPlaylists() {
                     alt="albumcover"
                   />
                 </Link>
-                <div className="playlistName">{name}</div>
+                <div className="featuredPlaylistName">{name}</div>
               </div>
             ))}
           </div>

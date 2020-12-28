@@ -1,18 +1,14 @@
 .Album {
   color: var(--black-light);
   transition: 0.5s ease all;
-  background: linear-gradient(#fff, #000);
   background: linear-gradient(to bottom, #ffffff 30%, #8a9dff 86%);
   padding: 2rem 0 2rem 0;
-  
-  
 }
 
 .albumGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   text-align: center;
-  
 }
 .albumCoverImage {
   border-radius: 20px;
@@ -70,14 +66,14 @@
   color: black;
 }
 
-@media(min-width: 730px){
-  .Album{
+@media (min-width: 730px) {
+  .Album {
     height: 100vh;
   }
 }
 
 @media (max-width: 730px) {
-  .Album{
+  .Album {
     overflow: hidden;
   }
   .albumGrid {
@@ -105,8 +101,7 @@
     font-size: 1.3rem;
   }
 
-  .Album{
+  .Album {
     height: 100%;
-   
   }
 }

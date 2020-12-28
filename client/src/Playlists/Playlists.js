@@ -24,7 +24,7 @@ function Playlists() {
       <h3>The occasional crazy playlists that you have saved</h3>
       <div className="PlaylistsSection">
         {Array.isArray(items) && (
-          <div className="grid">
+          <div className="playlistsGrid">
             {items
               .slice(0, 20)
               .map(({ description, images, name, id, owner }, i) => (

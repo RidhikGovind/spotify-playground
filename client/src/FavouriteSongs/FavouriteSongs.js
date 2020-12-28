@@ -40,9 +40,7 @@ function FavouriteSongs() {
                   <div className="songName">{track.name}</div>
                   <div className="songArtistsName">
                     {track.artists[0].name}
-                    {/* {track.artists.map((artist) => (
-                      <span className="artistname" >{artist.name}</span>
-                    ))} */}
+                    
                   </div>
                 </div>
               </div>

@@ -23,6 +23,10 @@
   }
 }
 
+.app-title{
+  margin-left: 1rem;
+}
+
 .menuIcon {
   display: flex;
 }
@@ -143,15 +147,9 @@
     font-size: 1.1rem;
   }
 }
-@media (max-width: 320px) {
-  /* .rightHeader {
-    display: flex;
-    flex-direction: column;
+@media (max-width: 530px) {
+  .app-title{
+    margin-left: 1rem;
+    display: none;
   }
-
-  .profileSection {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  } */
 }

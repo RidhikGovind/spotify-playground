@@ -22,7 +22,7 @@ function ArtistOpen({ match: { params } }) {
     <div className="Artist">
       <div className="artistImage">
         <img
-        className="artistCoverImg"
+        className="artistsCoverImg"
         src={item.images ? item.images[1].url : ""}
         alt="Artist Cover Img"
       />

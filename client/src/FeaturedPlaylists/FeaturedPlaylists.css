@@ -1,6 +1,5 @@
 .featuredPlaylistsGrid {
   display: grid;
-
   grid-template-columns: repeat(auto-fill, minmax(200px, 3fr));
   gap: 1rem;
   text-align: center;
@@ -12,7 +11,7 @@
 .featuredplaylistDetails {
   margin: 1.5rem 0;
 }
-.playlistName {
+.featuredPlaylistName {
   margin: 0.5rem 0rem;
   padding: 0.5rem;
 }
