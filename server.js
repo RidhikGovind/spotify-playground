@@ -6,7 +6,6 @@ let REDIRECT_URI = process.env.REDIRECT_URI || "http://localhost:8888/callback";
 let FRONTEND_URI = process.env.FRONTEND_URI || "http://localhost:3000";
 const PORT = process.env.PORT || 8888;
 
-
 if (process.env.NODE_ENV !== "production") {
   REDIRECT_URI = "http://localhost:8888/callback";
   FRONTEND_URI = "http://localhost:3000";
@@ -140,25 +139,6 @@ if (cluster.isMaster) {
           );
         }
       });
-
-      // axios
-      // .post(url, formData, options)
-      // .then((response) => {
-      //   if (response.status === 200) {
-      //     const access_token = response.access_token;
-      //     const refresh_token = response.refresh_token;
-
-      //     res.redirect(
-      //       `${FRONTEND_URI}/#${queryString.stringify({
-      //         access_token,
-      //         refresh_token,
-      //       })}`
-      //     )
-      //   } else{
-      //     res.redirect(`/#${queryString.stringify({error : 'invalid token'})}`)
-      //   }
-      // })
-      // .catch((err) => console.log("error while using axios POST (callback)",err));
     }
   });
 
@@ -166,39 +146,6 @@ if (cluster.isMaster) {
   app.get("/refresh_token", (req, res) => {
     const refresh_token = req.query.refresh_token;
     const url = "https://accounts.spotify.com/api/token";
-
-    //   const options = {
-    //     headers: {
-    //       "Authorization": `Basic ${new Buffer.from(
-    //         `${CLIENT_ID}:${CLIENT_SECRET}`
-    //       ).toString("base64")}`,
-    //       "Content-Type": "application/json",
-    //     },
-    //   };
-
-    //   // **not a good way
-    //   // const data = {
-    //   //   grant_type: "refresh_token",
-    //   //   refresh_token: refresh_token,
-    //   // };
-
-    //   const formData = new FormData();
-    //   formData.append('grant_type', 'refresh_token')
-    //   formData.append('refresh_token', refresh_token)
-
-    //   //making a post request to get the access token and sending it back to the /refresh_token path back to spotify.js
-    //   axios
-    //     .post(url, formData, options)
-    //     .then((response) => {
-    //       if (response.status === 200) {
-    //         const access_token = response.access_token;
-    //         res.send({ access_token });
-    //       }
-    //       console.log("something happened during POST axios")
-    //       return;
-    //     })
-    //     .catch((err) => console.log("error while using axios POST (refresh_token)",err));
-    // }
 
     const options = {
       url: "https://accounts.spotify.com/api/token",
@@ -224,15 +171,12 @@ if (cluster.isMaster) {
   });
 
   app.get("*", (req, res) => {
-    // *ONE MAJOR CHANGE DONE HERE*
+    // *ONE MAJOR CHANGE DONE HERE* - instead of the code in 179 in line 180
     // res.sendFile(path.resolve(__dirname, "../client/public", "index.html"));
-     res.sendFile(path.resolve(__dirname, "./client/public","index.html"));
-
+    res.sendFile(path.resolve(__dirname, "./client/public", "index.html"));
   });
 
   app.listen(PORT, () => {
     console.log(`server running at ${PORT}`);
   });
 }
-
-

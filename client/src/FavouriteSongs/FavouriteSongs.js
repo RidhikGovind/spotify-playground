@@ -25,7 +25,7 @@ function FavouriteSongs() {
         {Array.isArray(items) && (
           <div className="favouriteSongsGrid">
             {items.slice(0, 19).map(({ track }, i) => (
-              <Link to={`/track/${track.id}`} className="link">
+              <Link to={`/track/${track.id}`} className="link" key={i}>
               <div className="favouriteSongsDetails" key={i}>
                   <div className="albumImgSection">
                     <img

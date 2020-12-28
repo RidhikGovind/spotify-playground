@@ -34,11 +34,14 @@ export default function Header() {
 
   return (
     <div className="Header">
+      
       <div className="leftHeader">
         <div className="menuIcon" onClick={() => handleClicked()}>
           <i className={clicked ? "" : "fas fa-bars fa-2x"}></i>
+          {/* <h2 className="app-title">Spotify Playground</h2> */}
         </div>
       </div>
+     
       <div className={clicked ? "menusidebar show " : "menusidebar "}>
         <i className="fas fa-times fa-2x close" onClick={handleClicked}></i>
         {MenuItems.map((item, index) => (

@@ -3,22 +3,25 @@
 }
 
 .favouriteSongsGrid {
-  padding: 0.5rem;
+  padding: 1rem;
+  margin: 0 5rem;
 }
-.favouriteSongsGrid .link{
+.favouriteSongsGrid .link {
   color: black;
 }
 
 .favouriteSongsDetails {
   display: flex;
-  
   margin: 1.5rem 0;
   padding: 0.8rem;
   border-radius: 20px;
   transition: 0.5s ease all;
-  background: linear-gradient(#b3e5fce8 0%,#ffffff 80%);
+  background: linear-gradient(#b3e5fce8 0%, #ffffff 80%);
 }
 
+.favouriteSongsDetails:hover {
+  transform: scale(1.02);
+}
 .albumImgSection {
   padding-right: 2rem;
 }

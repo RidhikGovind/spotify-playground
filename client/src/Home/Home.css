@@ -1,14 +1,13 @@
 .Home {
   /* padding-bottom: 4rem; */
   background: linear-gradient(#ffffff 35%, #1db954 150%);
+  text-align: center;
 }
 
 .grid-home {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-top: 2rem;
+ 
 }
 
-.home-title {
-  margin-left: 10px;
-}

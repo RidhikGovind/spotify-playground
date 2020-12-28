@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
+import Header from "./Header/Header";
 import Home from "./Home/Home";
 import Playlists from "./Playlists/Playlists";
 import Artists from "./Artists/Artists";
@@ -9,7 +10,8 @@ import FavouriteSongs from "./FavouriteSongs/FavouriteSongs";
 import TopTracks from "./TopTracks/TopTracks";
 import Track from "./Track/Track";
 import Album from "./Album/Album";
-import Header from "./Header/Header";
+import Playlist from "./Playlist/Playlist";
+
 
 function Main() {
   return (
@@ -32,6 +34,8 @@ function Main() {
           <Route path="/track/:trackId" component={Track}></Route>
 
           <Route path="/album/:albumId" component={Album}></Route>
+
+          <Route path="/playlist/:playlistId" component={Playlist}></Route>
         </div>
       </div>
     </Router>

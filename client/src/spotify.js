@@ -101,7 +101,7 @@ export const getNewReleases = () =>
 
 export const getFeaturedPlaylists = () =>
   axios.get(
-    "https://api.spotify.com/v1/browse/featured-playlists?country=IN&limit=20&offset=0",
+    "https://api.spotify.com/v1/browse/featured-playlists?limit=20&offset=0",
     {
       headers,
     }
@@ -136,3 +136,6 @@ export const getTrack = (trackId) =>
 
 export const getAlbum = (albumId) =>
   axios.get(`https://api.spotify.com/v1/albums/${albumId}`, { headers });
+
+export const getPlaylist = (playlistId) =>
+  axios.get(`https://api.spotify.com/v1/playlists/${playlistId}`, { headers });
