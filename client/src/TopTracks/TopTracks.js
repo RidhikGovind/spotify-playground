@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./TopTracks.css";
 import { getUsersTopTracks } from "../spotify";
-import {  Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function TopTracks() {
   const [items, setItems] = useState([]);
@@ -28,13 +28,12 @@ function TopTracks() {
               <div className="topTrackDetails" key={i}>
                 <div className="albumImgSection">
                   <Link to={`/track/${id}`}>
-                  <img
-                    className="toptrackCoverImg"
-                    src={album.images ? album.images[1].url : ""}
-                    alt="albumcover"
-                  />
+                    <img
+                      className="toptrackCoverImg"
+                      src={album.images ? album.images[1].url : ""}
+                      alt="albumcover"
+                    />
                   </Link>
-                  
                 </div>
 
                 <div className="trackDetails">
